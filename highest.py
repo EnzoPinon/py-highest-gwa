@@ -10,9 +10,10 @@ def process():
            for item in new_list:
                # attempt to float all items, ignore if fail:
                try:
-                new_number = float(item)
-                print(new_number)
+                 new_number = float(item)
+                 old_number = 6.0
+                 if old_number > new_number:
+                     old_number = new_number
                except:
                    pass
-
 process()
