@@ -1,10 +1,9 @@
 # getting the student list.
 
-#DEFINE PROCESS AS FUNCTION
-#OPEN FILE "STUDENT_LIST.TXT"
-#FOR LOOP INITIALIZE
-#STRING.SPLIT() EVERY LINE AND TAKE THE GWA
-#USE LESS THAN OPERATOR, THEN SAVE THE LINE WITH THE HIGHER GWA
-#REPEAT UNTIL DONE
-#PRINT THE NAME AND GWA OF PERSON WITH HIGHEST GWA
-#END
+def process():
+    with open('student_list.txxt') as my_file:
+        
+        #split the line into a list where we can fetch the GWA.
+        for line in my_file:
+            new_list = line.split()
+            print(new_list)
