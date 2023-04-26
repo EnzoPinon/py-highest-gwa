@@ -3,6 +3,8 @@
 def process():
     #initialize the old number as 6.0 so the loop will update it at any time.
     old_number = 6.0
+    #initialize a list to allow more than one person to be called:
+    highest = []
     with open("student_list.txt", 'r') as my_file:        
         #Read the line one by one
         for line in my_file:
@@ -20,14 +22,12 @@ def process():
                      old_number = new_number
                except ValueError:
                    continue
-        
-        #in case we have more than one person getting the highest, we make a new list.
-        highest = []
-        #loop to find the people with the highest gwa with our result.
-        for line in my_file:
-            #search the string if they have the highest gwa. Convert float to string:
-            if line.find(str(old_number)):
-                #push the entry into the list
-                highest.push(line)
-
+           print(old_number)
+           #start searching for the number, stringed.
+           search = line.rfind(str(old_number))
+           #refine the search
+           if search != -1 and search == 9:
+               #append the matching student
+               highest.append(line)
+        print(highest)
 process()
