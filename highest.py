@@ -23,7 +23,7 @@ def process():
            #start searching for the number, stringed.
            search = line.rfind(str(old_number))
            #refine the search
-           if search != -1 and search == 9:
+           if search != -1:
                #append the matching student
                highest.append(line)
         print(highest)
