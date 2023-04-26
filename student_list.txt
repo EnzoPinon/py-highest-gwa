@@ -14,7 +14,7 @@ Ben - 5.00
 Judy - 2.90
 Lisa - 3.25
 Andy - 2.00
-Basten - 1.75
+Basten - 1.0
 Ameen - 1.50
 Alva - 1.25
 zack - 5.00
