@@ -20,5 +20,14 @@ def process():
                      old_number = new_number
                except ValueError:
                    continue
+        
+        #in case we have more than one person getting the highest, we make a new list.
+        highest = []
+        #loop to find the people with the highest gwa with our result.
+        for line in my_file:
+            #search the string if they have the highest gwa. Convert float to string:
+            if line.find(str(old_number)):
+                #push the entry into the list
+                highest.push(line)
 
 process()
