@@ -4,7 +4,7 @@ def process():
     #initialize the old number as 6.0 so the loop will update it at any time.
     old_number = 6.0
     #initialize a list to allow more than one person to be called:
-    highest = "null"
+    highest_gpa = "null"
     #make it wait until it finishes the entire loop.
     with open("student_list.txt", 'r') as my_file:        
         #Read the line one by one
@@ -12,19 +12,15 @@ def process():
            #split each and turn it into a list.
            new_list = line.split(" - ")
            print(new_list)
+           #extract name and GWA
            new_student = new_list[0]
-           new_number = new_list[1]
-           #make a new loop for every list that comes out.
-           for item in new_list:
-            # attempt to float all items, ignore if fail:
-            try:
-                new_number = float(item)
-                #compare old and new number
-                if old_number > new_number:
-                    old_number = new_number
-            except ValueError:
-                continue
+           gwa = new_list[1]
+           #convert GWA to Float
+           new_number = float(gwa)
+           if old_number > new_number:
+               highest_gpa = new_student
+               old_number = new_number
            #start searching for the number, stringed.
-           print(old_number)
-        print(highest)
+        
+        print("The student with the highest GWA is: ", highest_gpa, " with the GWA of ", str(old_number))
 process()
