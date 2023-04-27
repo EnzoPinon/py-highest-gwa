@@ -5,10 +5,10 @@ james - 3.0
 Phinneas - 5.0
 Russel - 3.25
 Mark - 2.0
-Lisa - 1.75
+Luki - 1.75
 Lewis - 1.5
 Jane - 2.25
-Nancy - 2.0
+moonlight - 2.0
 Clair - 3.0
 Ben - 5.00
 Judy - 2.9
